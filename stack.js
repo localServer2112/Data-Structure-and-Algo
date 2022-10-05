@@ -20,9 +20,41 @@ class Stack{
         console.log(`${deleteItem} removed from the top`);
         return deleteItem;
     }
+    // check top element in stack
+    peek(){
+        return this.items[this.count - 1]
+    }
+    // check if the stack is empty
+    isEmpty(){
+        return this.count == 0 
+    }
+    // check size of stack
+    size(){
+        return this.count
+    }
+    // print stack elements
+    print(){
+        let str = ''
+        for (let i = 0; i < this.count; i++){
+        str = this.items[i] + '';}
+        return str
+    }
+
+    // clear stack
+    clear(){
+        this.items = [];
+        this.count = 0;
+        return this.items
+    }
+
 }
 
 const stack = new Stack();
-stack.push('hey')
+stack.push('hey');
+stack.push('hello')
+stack.push('hi')
+stack.push(1950)
 stack.pop()
 stack.pop()
+stack.peek()
+stack.clear()
