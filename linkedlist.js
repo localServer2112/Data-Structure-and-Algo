@@ -45,6 +45,10 @@ class SinglyLinkedList{
         this.length++;
         return this;
     }
+
+    pop(){
+        // remove a node from the end of the linked list
+    }
 }
 
 let listt = new SinglyLinkedList();
